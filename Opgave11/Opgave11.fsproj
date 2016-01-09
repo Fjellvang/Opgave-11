@@ -51,6 +51,8 @@
     <Compile Include="Animals.fs" />
     <Compile Include="Prey.fs" />
     <Compile Include="Predator.fs" />
+    <Compile Include="Island.fs" />
+    <Compile Include="Simulation.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>
