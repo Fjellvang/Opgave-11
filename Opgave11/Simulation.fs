@@ -3,9 +3,9 @@
 module Simulation
 open Predator
 open Prey
-open Animal
 
-let x = Predator() :> Animal
 
+let x = Predator() :> Prey
+// giver true.
 printf "%b" (x :? Predator)
 ignore(System.Console.ReadLine())
