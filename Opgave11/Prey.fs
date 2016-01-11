@@ -1,9 +1,9 @@
 ﻿module Prey
 // Compile modul i mono ved: fsharpc -a Animals.fs
 
-type Prey(p:int*int) = class
-    let mutable x = fst p
-    let mutable y = snd p
+type Prey() = class
+    let mutable x = 0
+    let mutable y = 0
     let mutable breedtime = 5.0    
     // x,y posistion af dyr. gemt i tuple. afhænger af hvordan vi gemmer dyrerne. 
     // derved kan vi evt tjekke om deres x og y posistion er den samme og derfra evaluere hvad der skal ske

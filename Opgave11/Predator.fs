@@ -3,8 +3,8 @@
 module Predator
 open Prey
 
-type Predator(p:int*int) = class
-    inherit Prey(p)
+type Predator() = class
+    inherit Prey()
     // fixed starve time
     let mutable starvetime = 5.0
     member this.starveTime with get() = starvetime
