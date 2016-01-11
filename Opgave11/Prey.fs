@@ -14,6 +14,7 @@ type Prey(p:int*int) = class
     abstract member Move : int * int -> unit
     default this.Move(x,y) = this.posistion <- (x,y)
     // repopulations tid for dyrerne. lavet som abstract i tilfæde af at prey og predator's tid ikke er ens
+    // Skal angives ved programstart - ingen sikkerhed om det skal være individuelt eller ej.
     abstract member breedTime : float with get, set
     default this.breedTime with get() = breedtime
                            and set(v) = breedtime <- v // TEMP variable

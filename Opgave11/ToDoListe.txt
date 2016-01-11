@@ -1,0 +1,13 @@
+﻿
+
+Her er et tekst dokument til nogle af de ting jeg tænker vi mangler
+
+
+	-Unit Tests.
+	-Statiske variable til at holde styr på antallet af dyr / en længden af listen af dyr?
+	-Tick Funktion 
+		skal decremente starve time og breed time
+	-Move funktionen skal uddybes.
+	-Vi skal beslutte hvad der sker når dyret bevæger sig rundt. måske må de gerne indtage samme plads, og så derefter blive bedt om at bevæge sig?
+	- vi skal finde ud af hvad der sker når et dyr dør. Bare fjern dem fra listen?
+
