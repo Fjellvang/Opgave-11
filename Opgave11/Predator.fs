@@ -1,5 +1,4 @@
 ﻿// Compile Modul i Mono ved: fsharpc -a Predator.fs -r Animals.dll
-
 module Predator
 open Prey
 
