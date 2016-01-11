@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Animals.fs" />
     <Compile Include="Prey.fs" />
     <Compile Include="Predator.fs" />
     <Compile Include="Island.fs" />
