@@ -27,14 +27,20 @@ type Island() = class
         // Måske find en bedre måde at fixe de der lamda expressions.
         let mutable sign = "_"
         // hjælpe funktion. returnerer true hvis et dyrs posistion passer med en givent tuple
-        let posFnkt(p:Prey) = p.posistion = (x,y)
+        
         // doven
         let psfnkt(p:Predator) = p.posistion = (x,y)
         // endnu en hjælpe funktion
         
-        if Array.exists posFnkt preyArray then sign <- "M"
-        else if Array.exists psfnkt predatorArray then sign <- "W"
+        if Array.exists (fun (ele:Prey) -> ele.posistion = (x,y)) preyArray then sign <- "M"
+        else if Array.exists (fun (ele:Predator) -> ele.posistion = (x,y)) predatorArray then sign <- "W"
         
         sign
-    
+    // returner free posision
+    member this.getFreeSpot(x:Prey) =
+        // funktion der returnerer en ledig plads ved siden af x's x,y koordinater kan fødes til Move evt?
+        // må ikke overstive +/- islandx/islandy og skal maks være +1 af preys koordinater.
+        let currentX = fst x.posistion
+        let currentY = snd x.posistion
+    // OSv osv.
 end

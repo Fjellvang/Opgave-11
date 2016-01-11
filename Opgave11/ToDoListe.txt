@@ -11,3 +11,7 @@ Her er et tekst dokument til nogle af de ting jeg tænker vi mangler
 	-Vi skal beslutte hvad der sker når dyret bevæger sig rundt. måske må de gerne indtage samme plads, og så derefter blive bedt om at bevæge sig?
 	- vi skal finde ud af hvad der sker når et dyr dør. Bare fjern dem fra listen?
 
+	Problem: Føde når de er spærret i et hjørne.
+		Vi skal returnere en tom plads til at instansiere et nyt dyr. Hvis der ikke findes en ny plads til at føde et dyr, så må dyret holde sig.
+		måske funktion der tager et dyr. giver en tom plads ved siden af dyret?
+
