@@ -5,7 +5,7 @@ open Prey
 
 type Predator(p:int*int) = class
     inherit Prey(p)
-    // fixed starve time
+    // fixed starve time skal angives ved programstart
     let mutable starvetime = 5.0
     member this.starveTime with get() = starvetime
                            and set(v) = starvetime <- v

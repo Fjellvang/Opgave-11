@@ -5,14 +5,19 @@ open Predator
 type Island() = class
     let preyArray = [|new Prey((0,0))|]
     let predatorArray = [|new Predator((10,10))|]
+    let mutable islandx = 10
+    let mutable islandy = 10
+    member this.setIslandSize with set(v) =
+                                        islandx <- fst v
+                                        islandy <- snd v
     // finde en måde at sætte prey's posistion til deres elements plads i øen ?
     
     member this.DrawMap() =
         //en metode der tegner NxN map, måske 10x10
         //hvis der findes en prey / predator med x,y coordinater ved i,j gennemløb
         // tegn da en W for ulv, M for moose
-        for i=0 to 10 do
-            for j=0 to 10 do
+        for i=0 to islandx do
+            for j=0 to islandy do
                 printf "%s " (this.AnimalSign(i,j))
             System.Console.WriteLine()
     // print en map med _ for empty W for ulv, M for Moose.
