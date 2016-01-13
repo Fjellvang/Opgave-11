@@ -8,6 +8,9 @@ type Predator(p:int*int) = class
     let mutable starvetime = 5
     member this.starveTime with get() = starvetime
                            and set(v) = starvetime <- v
+    override this.Tick() =
+        base.Tick()
+        starvetime <- starvetime-1
 end
 
 

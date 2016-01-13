@@ -3,9 +3,24 @@
 module Simulation
 open Predator
 open Prey
+open Island
 
 // FORSKELLIGE TESTS.
-let x = Predator() :> Prey
-// giver true.
-printf "%b" (x :? Predator)
-ignore(System.Console.ReadLine())
+let island = new Island()
+let mutable running = true
+while running do
+    island.DrawMap()
+    for prey in island.PreyArray do
+        try
+            prey.Move(island.getFreeSpot(prey))
+        with
+            | :? System.Exception -> ignore()
+    for predator in island.PredatorArray do
+        try
+            predator.Move(island.getFreeSpot(predator))
+        with
+            | :? System.Exception -> ignore()
+    let x = System.Console.ReadLine()
+    if x = "1" then running <- true
+    //System.Console.Clear()
+    
